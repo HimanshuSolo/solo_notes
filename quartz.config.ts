@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "SOLO NOTES",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -24,20 +24,33 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        body: "Roboto",
         code: "IBM Plex Mono",
       },
+      // colors: {
+      //   lightMode: {
+      //     light: "#faf8f8",
+      //     lightgray: "#e5e5e5",
+      //     gray: "#b8b8b8",
+      //     darkgray: "#4e4e4e",
+      //     dark: "#2b2b2b",
+      //     secondary: "#284b63",
+      //     tertiary: "#84a59d",
+      //     highlight: "rgba(143, 159, 169, 0.15)",
+      //     textHighlight: "#fff23688",
+      //   },
+
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#eff1f5",        // Latte Crust (lightest background)
+          lightgray: "#e6e9ef",    // Latte Mantle (slightly darker background)
+          gray: "#acb0be",         // Latte Subtext0 (neutral mid-tone gray)
+          darkgray: "#737994",     // Latte Overlay0 (darker gray for contrast)
+          dark: "#4c4f69",         // Latte Text (primary text color)
+          secondary: "#fe640b",    // Latte Peach (vibrant accent)
+          tertiary: "#40c057",     // Latte Green (softer accent)
+          highlight: "rgba(254, 100, 11, 0.15)",  // Peach with 15% opacity
+          textHighlight: "#f4b8e433",            // Latte Flamingo at 20% opacity
         },
         darkMode: {
           light: "#161618",
@@ -86,10 +99,10 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
+
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
     ],
   },
 }
